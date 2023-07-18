@@ -1,184 +1,86 @@
----
-layout: table_wrappers
----
-
-<!DOCTYPE html>
-
-<html lang="{{ site.lang | default: 'en-US' }}">
-{% include head.html %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p4 {margin: 0.0px 0.0px 6.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p7 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    li.li2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    span.s1 {font-kerning: none}
+    span.s2 {text-decoration: underline ; font-kerning: none}
+    span.s3 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s4 {text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0000e9}
+    span.s5 {-webkit-text-stroke: 0px #000000}
+    span.s6 {text-decoration: underline ; font-kerning: none; color: #0000e9}
+    span.s7 {color: #0000e9; -webkit-text-stroke: 0px #000000}
+    span.s8 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0000e9}
+    ol.ol1 {list-style-type: decimal}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
 <body>
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <symbol id="svg-link" viewBox="0 0 24 24">
-      <title>Link</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
-    </symbol>
-    <symbol id="svg-search" viewBox="0 0 24 24">
-      <title>Search</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
-        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
-    </symbol>
-    <symbol id="svg-menu" viewBox="0 0 24 24">
-      <title>Menu</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </symbol>
-    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-      <title>Expand</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-        <polyline points="9 18 15 12 9 6"></polyline>
-      </svg>
-    </symbol>
-    <symbol id="svg-doc" viewBox="0 0 24 24">
-      <title>Document</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
-        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
-      </svg>
-    </symbol>
-  </svg>
-
-  <div class="side-bar">
-    <div class="site-header">
-      <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
-      <a href="#" id="menu-button" class="site-button">
-        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
-      </a>
-    </div>
-    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
-      {% if site.just_the_docs.collections %}
-        {% assign collections_size = site.just_the_docs.collections | size %}
-        {% for collection_entry in site.just_the_docs.collections %}
-          {% assign collection_key = collection_entry[0] %}
-          {% assign collection_value = collection_entry[1] %}
-          {% assign collection = site[collection_key] %}
-          {% if collection_value.nav_exclude != true %}
-            {% if collections_size > 1 %}
-              <div class="nav-category">{{ collection_value.name }}</div>
-            {% endif %}
-            {% include nav.html pages=collection %}
-          {% endif %}
-        {% endfor %}
-      {% else %}
-        {% include nav.html pages=site.html_pages %}
-      {% endif %}
-    </nav>
-    <footer class="site-footer">
-      This workshop is provided by the <a href='https://www.library.cmu.edu/' target='_blank'>Carnegie Mellon University Libraries</a>.<br><br>This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
-    </footer>
-  </div>
-  <div class="main" id="top">
-    <div id="main-header" class="main-header">
-      {% if site.search_enabled != false %}
-        <div class="search">
-          <div class="search-input-wrap">
-            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
-            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
-          </div>
-          <div id="search-results" class="search-results"></div>
-        </div>
-      {% endif %}
-      {% if site.aux_links %}
-        <nav aria-label="Auxiliary" class="aux-nav">
-          <ul class="aux-nav-list">
-            {% for link in site.aux_links %}
-              <li class="aux-nav-list-item">
-                <a href="{{ link.last }}" class="site-button"
-                  {% if site.aux_links_new_tab %}
-                  target="_blank" rel="noopener noreferrer"
-                  {% endif %}
-                >
-                  {{ link.first }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
-      {% endif %}
-    </div>
-    <div id="main-content-wrap" class="main-content-wrap">
-      {% unless page.url == "/" %}
-        {% if page.parent %}
-          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-            <ol class="breadcrumb-nav-list">
-              {% if page.grand_parent %}
-                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
-                <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
-              {% else %}
-                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
-              {% endif %}
-              <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
-            </ol>
-          </nav>
-        {% endif %}
-      {% endunless %}
-      <div id="main-content" class="main-content" role="main">
-        {% if site.heading_anchors != false %}
-          {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
-        {% else %}
-          {{ content }}
-        {% endif %}
-
-        {% if page.has_children == true and page.has_toc != false %}
-          <hr>
-          <h2 class="text-delta">Table of contents</h2>
-          <ul>
-            {%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent", page.parent -%}
-            {% for child in children_list %}
-              <li>
-                <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-
-        {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}
-          <hr>
-          <footer>
-            {% if site.back_to_top %}
-              <p><a href="#top" id="back-to-top">{{ site.back_to_top_text }}</a></p>
-            {% endif %}
-            {% if site.footer_content != nil %}
-              <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
-            {% endif %}
-
-            {% if site.last_edit_timestamp or site.gh_edit_link %}
-              <div class="d-flex mt-2">
-                {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
-                  <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                    Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date: site.last_edit_time_format }}</span>.
-                  </p>
-                {% endif %}
-                {% if
-                  site.gh_edit_link and
-                  site.gh_edit_link_text and
-                  site.gh_edit_repository and
-                  site.gh_edit_branch and
-                  site.gh_edit_view_mode
-                %}
-                  <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}{% if site.gh_edit_source %}/{{ site.gh_edit_source }}{% endif %}/{{ page.path }}" id="edit-this-page">{{ site.gh_edit_link_text }}</a>
-                  </p>
-                {% endif %}
-              </div>
-            {% endif %}
-          </footer>
-        {% endif %}
-
-      </div>
-    </div>
-
-    {% if site.search_enabled != false %}
-      {% if site.search.button %}
-        <a href="#" id="search-button" class="search-button">
-          <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-search"></use></svg>
-        </a>
-      {% endif %}
-
-      <div class="search-overlay"></div>
-    {% endif %}
-  </div>
+<p class="p1"><span class="s1">--- layout: table_wrappers --- {% include head.html %}</span></p>
+<p class="p2"><span class="s2"><a href="file:///Users/sarahy/Documents/GitHub/cochrane_r_part2/_layouts/%7B%7B%20'/'%20%7C%20absolute_url%20%7D%7D">{% include title.html %}</a></span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">{% if site.just_the_docs.collections %} {% assign collections_size = site.just_the_docs.collections | size %} {% for collection_entry in site.just_the_docs.collections %} {% assign collection_key = collection_entry[0] %} {% assign collection_value = collection_entry[1] %} {% assign collection = site[collection_key] %} {% if collection_value.nav_exclude != true %} {% if collections_size &gt; 1 %}</span></p>
+<p class="p1"><span class="s1">{{ collection_value.name }}</span></p>
+<p class="p1"><span class="s1">{% endif %} {% include nav.html pages=collection %} {% endif %} {% endfor %} {% else %} {% include nav.html pages=site.html_pages %} {% endif %}<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">This workshop is provided as part of the <a href="https://colloquium2023.cochrane.org/"><span class="s4">Cochrane Colloquium 2023</span></a>.</span></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">This site uses <a href="https://github.com/pmarsceill/just-the-docs"><span class="s4">Just the Docs</span></a>, a documentation theme for Jekyll.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">{% if site.search_enabled != false %}</span></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{% endif %} {% if site.aux_links %}</span></p>
+<ul class="ul1">
+  <li class="li1"><span class="s5"></span><span class="s1">{% for link in site.aux_links %}</span></li>
+  <li class="li2"><span class="s5"><a href="file:///Users/sarahy/Documents/GitHub/cochrane_r_part2/_layouts/%7B%7B%20link.last%20%7D%7D"><span class="s6">{{ link.first }}<span class="Apple-converted-space"> </span></span></a></span></li>
+  <li class="li1"><span class="s5"></span><span class="s1">{% endfor %}<span class="Apple-converted-space"> </span></span></li>
+</ul>
+<p class="p1"><span class="s1">{% endif %}<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">{% unless page.url == "/" %} {% if page.parent %}</span></p>
+<ol class="ol1">
+  <li class="li1"><span class="s5"></span><span class="s1">{% if page.grand_parent %}</span></li>
+  <li class="li2"><span class="s5"><a href="file:///Users/sarahy/Documents/GitHub/cochrane_r_part2/_layouts/%7B%7B%20first_level_url%20%7D%7D"><span class="s6">{{ page.grand_parent }}</span></a></span></li>
+  <li class="li2"><span class="s5"><a href="file:///Users/sarahy/Documents/GitHub/cochrane_r_part2/_layouts/%7B%7B%20second_level_url%20%7D%7D"><span class="s6">{{ page.parent }}</span></a></span></li>
+  <li class="li1"><span class="s5"></span><span class="s1">{% else %}</span></li>
+  <li class="li2"><span class="s5"><a href="file:///Users/sarahy/Documents/GitHub/cochrane_r_part2/_layouts/%7B%7B%20first_level_url%20%7D%7D"><span class="s6">{{ page.parent }}</span></a></span></li>
+  <li class="li1"><span class="s5"></span><span class="s1">{% endif %}</span></li>
+  <li class="li1"><span class="s5"></span><span class="s1">{{ page.title }}</span></li>
+</ol>
+<p class="p1"><span class="s1">{% endif %} {% endunless %}</span></p>
+<p class="p1"><span class="s1">{% if site.heading_anchors != false %} {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %} {% else %} {{ content }} {% endif %} {% if page.has_children == true and page.has_toc != false %}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Table of contents</b></span></h2>
+<ul class="ul1">
+  <li class="li1"><span class="s5"></span><span class="s1">{%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent", page.parent -%} {% for child in children_list %}</span></li>
+  <li class="li1"><span class="s7"><a href="file:///Users/sarahy/Documents/GitHub/cochrane_r_part2/_layouts/%7B%7B%20child.url%20%7C%20absolute_url%20%7D%7D"><span class="s8">{{ child.title }}</span></a></span><span class="s1">{% if child.summary %} - {{ child.summary }}{% endif %}<span class="Apple-converted-space"> </span></span></li>
+  <li class="li1"><span class="s5"></span><span class="s1">{% endfor %}<span class="Apple-converted-space"> </span></span></li>
+</ul>
+<p class="p1"><span class="s1">{% endif %} {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{% if site.back_to_top %}</span></p>
+<p class="p6"><span class="s2">{{ site.back_to_top_text }}</span></p>
+<p class="p1"><span class="s1">{% endif %} {% if site.footer_content != nil %}</span></p>
+<p class="p7"><span class="s1">{{ site.footer_content }}</span></p>
+<p class="p1"><span class="s1">{% endif %} {% if site.last_edit_timestamp or site.gh_edit_link %}</span></p>
+<p class="p1"><span class="s1">{% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}</span></p>
+<p class="p7"><span class="s1">Page last modified: {{ page.last_modified_date | date: site.last_edit_time_format }}.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">{% endif %} {% if site.gh_edit_link and site.gh_edit_link_text and site.gh_edit_repository and site.gh_edit_branch and site.gh_edit_view_mode %}</span></p>
+<p class="p6"><span class="s2"><a href="file:///Users/sarahy/Documents/GitHub/cochrane_r_part2/_layouts/%7B%7B%20site.gh_edit_repository%20%7D%7D/%7B%7B%20site.gh_edit_view_mode%20%7D%7D/%7B%7B%20site.gh_edit_branch%20%7D%7D%7B%25%20if%20site.gh_edit_source%20%25%7D/%7B%7B%20site.gh_edit_source%20%7D%7D%7B%25%20endif%20%25%7D/%7B%7B%20page.path%20%7D%7D">{{ site.gh_edit_link_text }}</a></span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">{% endif %}<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">{% endif %}<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">{% endif %}<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">{% if site.search_enabled != false %} {% if site.search.button %} {% endif %}</span></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{% endif %}<span class="Apple-converted-space"> </span></span></p>
 </body>
 </html>
