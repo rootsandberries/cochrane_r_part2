@@ -7,9 +7,9 @@ has_children: false
 
 ## Setup instructions
 
-### Today’s Workshop: RStudio Cloud
+### Today’s Workshop: Posit Cloud
 
-For the purposes of today’s workshop, we’ll be using RStudio Cloud. This is a free browser-based application that allows you to run R and RStudio without downloading any software to your computer. To get set up with RStudio Cloud, visit [the RStudio Cloud website](https://rstudio.cloud/) and click on Get Started for Free. Click on Sign Up to create a free RStudio account. Once you’ve created your account, log in to get started.
+For the purposes of today’s workshop, we’ll be using Posit Cloud (formerly RStudio Cloud). This is a free browser-based application that allows you to run R and RStudio without downloading any software to your computer. To get set up with Posit Cloud, visit [the Posit Cloud website](https://posit.cloud/) and click on Get Started. Choose the Free version and then click on Sign Up to create a free account. Once you’ve created your account, log in to get started.
 
 ### Data
 
