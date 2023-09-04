@@ -83,35 +83,8 @@ class(anderson_refs$source)
 > ~~~
 > ## To import data use the read.csv() function. To recode missing values to NA, use the `na.strings` argument
 >
-> read.csv(anderson_refs, file = 'data/anderson_refs_clean.csv', na.strings = "na")
+> anderson_refs <- read.csv(file = "data/anderson_refs.csv", na.strings = "na")
 > ~~~
 > {: .language-r}
 >
 {: .callout}
-
-> ## The `write.csv` Function
->
-> After altering a dataset by replacing columns or updating values you can save the new output with `write.csv(...)`.
-> 
-> ~~~
-> ## To export the data use the write.csv() function. It requires a minimum of two arguments for the data to be saved and the name of the output file.
-> 
-> ## For example, if we had edited the anderson_refs csv file we could use:
-> write.csv(anderson_refs, file = "./data/anderson-refs-cleaned.csv")
-> ~~~
-> {: .language-r}
->
-{: .callout}
-
-> ## The `row.names` Argument
->
-> This argument for the write.csv function allows us to set the names of the rows in the output data file. R’s default for this argument is TRUE, and since it does not know what else to name the rows for the dataset, it resorts to using row numbers. To correct this, we can set row.names to FALSE:
-> ~~~
-> ## To export data use the write.csv() function. To avoid an additional column with row numbers, set `row.names` to FALSE
->
-> write.csv(anderson_refs, file = 'data/anderson_refs_clean.csv', row.names = FALSE)
-> ~~~
-> {: .language-r}
->
-{: .callout}
-
